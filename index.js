@@ -5,8 +5,8 @@ const app = express();
 app.use(express.json());
 
 // creating routes
-app.get("/migrate-service-name", (req, res) => {
-  res.send("AWS Lambda equivalent service in IBM Cloud is Code Engine");
+app.get("/hackathon-purpose", (req, res) => {
+  res.send("LLM based cloud code migrator agent from Vendor locked-in service.");
 });
 
 app.post("/eq-service-name", (req, res) => {
