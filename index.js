@@ -5,21 +5,13 @@ const app = express();
 app.use(express.json());
 
 // creating routes
-app.get("/hello", (req, res) => {
-  res.send("Hello world!");
+app.get("/migrate-service-name", (req, res) => {
+  res.send("AWS Lambda equivalent service in IBM Cloud is Code Engine");
 });
 
-app.post("/hello", (req, res) => {
+app.post("/eq-service-name", (req, res) => {
   const { name } = req.body;
-
-  res.json(`Hello there ${name}!`);
+  res.json(`Hello the ${name} equivalent service in ibm cloud is Code Engine`);
 });
-
-// const PORT = 8080;
-
-// app.listen(PORT, () => {
-//     console.log(`Server is running on PORT: ${PORT}`);
-// });
-
 
 module.exports.handler = serverless(app);
